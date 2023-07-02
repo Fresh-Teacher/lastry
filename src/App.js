@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const repo = "https://github.com/adueck/pwa-install-demo";
+const repo = "https://freshteacher.software";
 let deferredPrompt;  
     
 function App() {
@@ -41,18 +42,21 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2>Install Demo</h2>
-        {installable &&
-          <button className="install-button" onClick={handleInstallClick}>
-            INSTALL ME
+        <h2>Fresh Teacher's Technologies</h2>
+        {installable && (
+          <button className="install-button btn btn-primary" onClick={handleInstallClick}>
+            <strong>INSTALL FRESH TEACHER'S APP 📥</strong>
           </button>
-        }
-        <p>
-          <a href={repo} className="App-link">View source on GitHub</a>
+        )}
+        <p><br></br>
+          <a href={repo} className="btn btn-success App-link">
+            <b>GO TO FRESH TEACHER'S E-LIBRARY 📚</b>
+          </a>
         </p>
       </header>
     </div>
   );
+  
 }
 
 export default App;
